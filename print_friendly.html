@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print-Friendly Curriculum Vitae - Stafford Lumsden</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Stylesheet -->
+    <style>
+        /* --- START STYLESHEET --- */
+        :root {
+            --bg-primary: #ffffff; /* Always white for print */
+            --bg-secondary: #ffffff;
+            --text-primary: #111827;
+            --text-secondary: #4b5563;
+            --border-color: #d1d5db;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+        }
+
+        main {
+            background-color: var(--bg-secondary);
+        }
+
+        .prose h2 { 
+            color: var(--text-primary);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+         }
+        .prose h3 {
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        .prose p, .prose ul li { color: var(--text-secondary); }
+        .prose strong { color: var(--text-primary); }
+        .prose ul li::marker { color: var(--text-secondary); }
+        .prose a { color: var(--text-primary); text-decoration: underline; }
+        .prose hr {
+            border-color: var(--border-color);
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                padding: 0;
+                margin: 0;
+            }
+            main {
+                box-shadow: none !important;
+                border: none !important;
+                padding: 0 !important;
+            }
+        }
+        /* --- END STYLESHEET --- */
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="w-full max-w-4xl mx-auto">
+        <!-- Header -->
+        <header class="flex justify-between items-start mb-6">
+            <div class="text-left">
+                <h1 class="text-3xl font-bold">Stafford Lumsden</h1>
+                <div class="text-base mt-2 space-y-1" style="color: var(--text-secondary);">
+                    <p>701/527 Princes Hwy Rockdale NSW 2216</p>
+                    <p>
+                        Email: <a href="mailto:stafford.lumsden@gmail.com" class="prose">stafford.lumsden@gmail.com</a> | 
+                        Ph: +61(0)459716964
+                    </p>
+                    <p>
+                        Web: <a href="http://stafford.net.nz" class="prose">http://stafford.net.nz</a> | 
+                        Linkedin: <a href="https://www.linkedin.com/in/safford-lumsden" class="prose">linkedin.com/in/safford-lumsden</a>
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Application Container -->
+        <main class="p-8 rounded-2xl shadow-2xl">
+            <div class="prose max-w-none">
+                <section>
+                    <h2>Professional Profile</h2>
+                    <p>I am a Learning & Organisational Development leader and Educational and curriculum design specialist with 15+ years experience in higher education. My designs are evidence-based, and culturally competent. I have extensive experience leading initiatives across complex higher education, public service, and international settings. My track record includes leading the design and delivery of professional development programs, advising senior academics on curriculum and assessment strategy, leading governance initiatives, and running multi-stakeholder projects funded through competitive grants. I am known for data-informed decision-making, inclusive practice, and building high-performing teams that deliver measurable outcomes.</p>
+                </section>
+                
+                <section>
+                    <h2>Key Capabilities</h2>
+                    <ul class="list-none pl-0 space-y-2">
+                        <li><strong>Culture & change</strong> — Designed and delivered faculty-wide PD programs; chaired unit governance to drive consistency and quality; contributed to interdisciplinary improvement groups.</li>
+                        <li><strong>Leadership development</strong> — Built leader’s capacity via workshops, mentoring and induction programs for academic staff and instructors and practitioners, facilitated communities of practice.</li>
+                        <li><strong>Strategy & project management</strong> — Led multiple funded education projects and secured national funding to scale work-integrated learning; reported insights to leadership to inform decisions.</li>
+                        <li><strong>Data-informed practice</strong> — Managed academic quality through analysis of performance, feedback, retention and attrition; applied analytics tools (NVivo, SPSS, PowerBI etc.) to evaluate initiatives.</li>
+                        <li><strong>Stakeholder engagement</strong> — Worked across faculties, central committees and external partners (publishers, universities); coordinated with senior leaders and multidisciplinary teams.</li>
+                        <li><strong>Inclusive practice</strong> — Designed learning that supports diverse cohorts; presented on cultural competence in legal education.</li>
+                        <li><strong>Digital enablement</strong> — Deep experience with LMS (Canvas, Moodle, Blackboard), collaboration and analytics stacks; created and maintained responsible GenAI resources for staff/students.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Career History</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <h3>Higher Education Consultancy</h3>
+                            <p><strong>Principal</strong> (June 2023 – Present)</p>
+                            <p class="italic">Bespoke educational design consultancy focusing on legal education and public sector L&D</p>
+                            <p class="mt-2" style="color: var(--text-primary);"><strong>Highlights & Impact</strong></p>
+                            <ul class="list-disc pl-5 space-y-1 mt-1">
+                                <li>Engaged by LPAB/LEC to provide advice on assessment for admission to the profession, Online and hybrid learning for units delivering prescribed areas of knowledge (Priestly 11). Learning Management System design and templating, educational governance and standards.</li>
+                                <li>Designed Artificial Intelligence policies for core and elective units of study in the Diploma of Laws, designed implementation strategy.</li>
+                                <li>Reviewed Office of the Director of Public Prosecutions Role Mapped Training Program for ODPP continued professional development uplift.</li>
+                                <li>Designed modules and units for level 1 – 3 solicitors, Managing Solicitors and Solicitors Advocate in trial preparation, client conferencing, appeals, and Human Resources.</li>
+                                <li>Provided blueprints to in-house educational designers for implementation in SAP SuccessFactors LMS.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>University of Sydney Law School</h3>
+                            <p><strong>Educational Designer</strong> (Feb 2023 – Present)</p>
+                             <p class="italic">Leading and supporting educational design in the LLB, JD, LLM, Specialist Masters, and Research programs.</p>
+                            <p class="mt-2" style="color: var(--text-primary);"><strong>Highlights & Impact</strong></p>
+                            <ul class="list-disc pl-5 space-y-1 mt-1">
+                                <li>Delivered a professional learning program (workshops/seminars) to uplift teaching capability and align practice with school priorities.</li>
+                                <li>Partnered with Associate Dean (Education) on the LLB/JD curriculum review (2023–2025), ensuring quality, consistency and compliance.</li>
+                                <li>Chaired the Unit Outline Approval Committee to strengthen governance and reduce variability in unit documentation.</li>
+                                <li>Contributed to Academic Excellence and eTools committees to drive evidence-based improvement.</li>
+                                <li>Led three funded education projects (AUD $40k, $38k, $80k) and secured $100k NPLF to expand Work Integrated Learning (2023–2024).</li>
+                                <li>Built Canvas resources and responsible GenAI guidance for staff and students to improve efficiency and learner experience.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>University of Wollongong</h3>
+                            <p><strong>Educational Developer</strong> (Jul 2018 – Jan 2023)</p>
+                            <div class="mt-2 pl-4 border-l-2" style="border-color: var(--border-color);">
+                                <p class="italic">Interdisciplinary educational design and academic development support across multiple schools/faculties.</p>
+                                <p class="mt-2" style="color: var(--text-primary);"><strong>Highlights & Impact</strong></p>
+                                <ul class="list-disc pl-5 space-y-1 mt-1">
+                                    <li>Delivered a professional learning program (workshops/seminars) to uplift teaching capability.</li>
+                                    <li>Designed curriculum and assessment aligned to institutional models and outcomes; advised on pedagogy and assessment.</li>
+                                    <li>Served on curriculum review committees; managed team SharePoint; produced leadership reports to inform decision-making.</li>
+                                    <li>Delivered educator capability uplift via workshops and practical training; convened communities of practice.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>Sookmyung Women’s University (Seoul)</h3>
+                            <p><strong>Program Coordinator, YL TESOL</strong> (Jul 2017 – Jul 2018)</p>
+                            <div class="mt-2 pl-4 border-l-2" style="border-color: var(--border-color);">
+                                <p class="italic">Leading departmental process improvement and educational delivery.</p>
+                                <p class="mt-2" style="color: var(--text-primary);"><strong>Highlights & Impact</strong></p>
+                                 <ul class="list-disc pl-5 space-y-1 mt-1">
+                                    <li>Delivered and managed academic quality (performance, feedback, retention, attrition) and scheduling for nine full-time faculty.</li>
+                                    <li>Designed and implemented plans for uplift of hybrid and fully online delivery of courses.</li>
+                                    <li>Designed targeted professional development with observation/feedback; led induction and department meetings; engaged external partners.</li>
+                                    <li>Advised central university on advertising and marketing, student recruitment, retention.</li>
+                                    <li>Conducted strategic uplift of student feedback mechanisms, implemented data-driven reforms of practice in collaboration with senior academics and university leadership.</li>
+                                    <li>Taught undergraduate and postgraduate courses in Education and Applied Linguistics.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                             <h3>Sookmyung Women’s University (Seoul)</h3>
+                            <p><strong>Program Coordinator, Online TESOL</strong> (Aug 2013 – Jul 2018)</p>
+                             <div class="mt-2 pl-4 border-l-2" style="border-color: var(--border-color);">
+                                <p class="italic">Ground-up design, development, delivery and monitoring of national-first online education program in collaboration with multiple international academic publishers. Teaching undergraduate and postgraduate courses in Education and Applied Linguistics.</p>
+                                 <p class="mt-2" style="color: var(--text-primary);"><strong>Highlights & Impact</strong></p>
+                                 <ul class="list-disc pl-5 space-y-1 mt-1">
+                                    <li>Delivered and managed academic quality (performance, feedback, retention, attrition) and scheduling for nine.</li>
+                                    <li>Evaluated/selected Learning Management System and educational design/resource tools.</li>
+                                    <li>Provided professional development to staff and training to students (remote).</li>
+                                    <li>Mentored online instructors.</li>
+                                    <li>Analysed student data and online learning analytics to sustain educational quality.</li>
+                                    <li>Led teams delivering web-enhanced, blended and fully online programs at postgraduate level.</li>
+                                    <li>Taught undergraduate and postgraduate courses in Education and Applied Linguistics.</li>
+                                </ul>
+                            </div>
+                        </div>
+                         <div>
+                            <h3>YBM Premier (Daegu)</h3>
+                            <p><strong>Academic Supervisor</strong> (Jan 2013 – Jul 2013)</p>
+                            <div class="mt-2 pl-4 border-l-2" style="border-color: var(--border-color);">
+                                <p class="italic">Building instructor capacity in highly competitive education market</p>
+                                 <p class="mt-2" style="color: var(--text-primary);"><strong>Highlights & Impact</strong></p>
+                                 <ul class="list-disc pl-5 space-y-1 mt-1">
+                                    <li>Led a mixed team (10 native-speaker + 12–15 Korean instructors, 1 Japanese instructor).</li>
+                                    <li>Workforce scheduling, payroll duties.</li>
+                                    <li>Instructor mentoring, observations, delivery of professional development workshop.</li>
+                                    <li>Contributed to a national curriculum reaching approx. 130,000 students monthly.</li>
+                                    <li>Taught English language learners CEFR A1 – C2.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>Gyeongin National University of Education</h3>
+                            <p><strong>Lead Teacher Trainer</strong> (Dec 2012 – Dec 2013)</p>
+                             <div class="mt-2 pl-4 border-l-2" style="border-color: var(--border-color);">
+                                <p class="italic">Leading newly established postgraduate program in Education and Applied Linguistics.</p>
+                                <p class="mt-2" style="color: var(--text-primary);"><strong>Highlights & Impact</strong></p>
+                                 <ul class="list-disc pl-5 space-y-1 mt-1">
+                                    <li>Designed a new postgraduate certificate in collaboration with Australian university.</li>
+                                    <li>Introduced web-enhanced delivery of programs via Blackboard.</li>
+                                    <li>Built professional development programs and established community of practice among small instructor cohort.</li>
+                                    <li>Taught postgraduate courses in Education and Applied Linguistics.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section>
+                    <h2>Education</h2>
+                     <ul class="list-none pl-0 space-y-2">
+                        <li><strong>GenAI for Cybersecurity Professional</strong>, International Business Machines (IBM)</li>
+                        <li><strong>PhD (Applied Linguistics)</strong>, Macquarie University — MQRES Scholarship (2019–2021)</li>
+                        <li><strong>M Res. (Educational Research)</strong>, Macquarie University — RTP Scholarship (2017–2018)</li>
+                        <li><strong>MA TESOL (Applied Linguistics)</strong>, Victoria University of Wellington</li>
+                        <li><strong>BA (Political Science)</strong>, University of Auckland</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Achievements</h2>
+                     <ul class="list-none pl-0 space-y-3">
+                        <li>
+                            <p><strong>Competitive funding:</strong></p>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>three education grants (AUD $40k/$38k/$80k) and $100k NPLF to scale WIL (2024–2025).</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Awards/recognition:</strong></p>
+                             <ul class="list-disc pl-5 space-y-1">
+                                <li>Named an AI Thought Leader by the Governance Institute of Australia (2025).</li>
+                                <li>AFR Higher Education Award (Learning Experience) 2021 winner.</li>
+                                <li>Multiple university awards/nominations.</li>
+                                <li>Gangnam Mayoral Award for Teaching.</li>
+                            </ul>
+                        </li>
+                         <li>
+                            <p><strong>Organisation:</strong></p>
+                             <ul class="list-disc pl-5 space-y-1">
+                                <li>Organised multiple events and panels on AI including senior members of the legal profession, members of the federal bench and legal educators.</li>
+                                <li>Led multiple national and international conference organising groups.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Professional Skills</h2>
+                    <ul class="list-none pl-0 space-y-2">
+                        <li><strong>OD & L&D:</strong> program design, leadership capability, induction, coaching, facilitation, evaluation.</li>
+                        <li><strong>Governance & quality:</strong> committee leadership, approval workflows, policy alignment, reporting.</li>
+                        <li><strong>Data & analytics:</strong> NVivo, SPSS; survey/feedback analysis; dashboards.</li>
+                        <li><strong>Platforms:</strong> Canvas, Moodle, Blackboard; H5P, Articulate, Captivate; MS Teams, Zoom; SharePoint, Loop/Notion.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Diversity, Inclusion & Cultural Safety</h2>
+                    <p>Experience designing inclusive learning curricula for diverse cohorts and presenting on cultural competence in legal education; committed to accessible, values-driven practice. Experience with UDL, accessibility standards, Disability Discrimination Act 1992 (Cth) requirements in online and in-person teaching and learning contexts. I completed the University of Sydney Culturally Competent Leadership Program in 2024.</p>
+                </section>
+                
+                <section>
+                    <h2>Select Bibliography</h2>
+                     <p>I have authored a growing number of book chapters and articles on multimodality, learning design and responsible AI in education and frequently present at national and international conferences.</p>
+                    <ul class="list-disc pl-5 space-y-3 text-sm mt-3">
+                        <li>Lumsden, S. (2025). <em>Making sense of multimodality and social semiotics in TESOL</em>. The English Connection 29(2) 6-8.</li>
+                        <li>Lumsden, S. (2025). A multimodal social semiotic approach to TESOL educator professional development in A. Alm, C. Lai, and Q Ma (Eds.) <em>Transitions in CALL</em>, Castledown.</li>
+                        <li>Lumsden, S. (2024, September). A multimodal social semiotic approach to TESOL educator professional development. In <em>Proceedings of the International CALL Research Conference</em> (Vol. 2024, pp. 163-168). https://doi.org/10.29140/9780648184485-25</li>
+                        <li>Lumsden, S., Djonov, E, & Slatyer, H (2024) The Multimodal Community of Inquiry: A framework for evaluating online learning environments in higher education. In V. Lim & M. Querol-Julián M. (Eds.) <em>Designing Learning with Digital Technologies: Perspectives from Multimodality in Education</em>, Routledge.</li>
+                        <li>Lumsden, S. (2023) Student Writing Support with Generative Artificial Intelligence. <em>The English Connection 27</em>(3) 7 – 12.</li>
+                        <li>Lumsden, S. (2022) <em>A Multimodal Social Semiotic Approach to The Community of Inquiry Framework</em>. [Doctoral Thesis], Macquarie University, NSW, Australia. https://doi.org/10.13140/RG.2.2.20212.83846</li>
+                        <li>Lumsden, S. (2018) <em>The Relationship Between Teaching Presence and Online Instructor Satisfaction in an Online Teacher Training Program</em>. [Master’s Thesis], Macquarie University, NSW, Australia. http://dx.doi.org/10.13140/RG.2.2.18535.11688</li>
+                        <li>Lumsden, S. (2011) Evaluating CALL Materials: How About an iPhone? <em>Proceedings of PAC 2010 – The Pan-Asia Conference / the 18th Annual KOTESOL International Conference, Seoul, Korea: Korea TESOL</em> 147-159 https://koreatesol.org/sites/default/files/pdf_publications/KOTESOL-Proceeds2010web.pdf</li>
+                    </ul>
+                </section>
+                
+                <hr />
+
+                <section>
+                    <h2>Presentations</h2>
+                    <ul class="list-disc pl-5 space-y-3 text-sm">
+                        <li>A multimodal social semiotic approach to TESOL educator professional development – XXII CALL Research Conference, Waseda University Law School, Tokyo, September 2024.</li>
+                        <li>Streamlining Feedback and Deepening Understanding with Gen AI Agents – Australasian Legal Education and Generative AI Showcase, Monash University, September 2024</li>
+                        <li>Cogniti AI chatbots for academics and teaching teams – Common Law Week- University of New England Law School, August 2024</li>
+                        <li>Cultural competence in legal education settings – University of Sydney Law School, May 2024</li>
+                        <li>Research education and generative AI – Sydney University Unconference 2024, Sydney University, February 2024</li>
+                        <li>A Research Agenda for Legal Education – Legal Education Conference 2023, University of New South Wales, November 2023</li>
+                        <li>Towards a Multimodal Community of Inquiry Framework – Association of Academic Language and Learning International Conference, November 2021.</li>
+                        <li>Concepts to consider in course design and layout of TESOL courses delivered online – University of Sydney Law School, 14th University of Sydney TESOL Research Network Colloquium, September 2019</li>
+                        <li>Teaching Presence Guidelines for Online Instruction – Japan Assoc. of Language Teachers, Tokyo, November 2017</li>
+                    </ul>
+                </section>
+
+                <hr />
+
+                <section>
+                    <h2>Educational Design – Law Specific</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8">
+                        <div>
+                             <p><strong>Undergraduate</strong></p>
+                             <p>Torts, Criminal Law Process & Research, Criminal & Civil Procedure, Public Law & Statutory Interpretation, Corporations Law, Equity, Evidence, Advanced Evidence, Chinese Laws and Legal System, Competition Law, Family Law, Federal Constitutional Law,</p>
+                        </div>
+                         <div>
+                            <p><strong>Postgraduate</strong></p>
+                            <p>Legal Reasoning & The Common Law, War Law, Environmental Dispute Resolution, International Commercial Arbitration, International Contracts, Advanced Criminal Law, Philosophy of Law.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr />
+
+                 <section>
+                    <h2>Curriculum Design</h2>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Bachelor of Laws (University of Sydney, 2023-2025)</li>
+                        <li>Juris Doctor (University of Sydney, 2023-2025)</li>
+                        <li>Master of Laws (University of Sydney, 2024 – Present)</li>
+                        <li>Master of Taxation, Master of Criminology, (University of Sydney, 2023-2024)</li>
+                    </ul>
+                </section>
+
+                <hr />
+                
+                <section class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+                    <div>
+                        <h2>Languages</h2>
+                        <ul class="list-disc pl-5 space-y-2">
+                           <li>English (native)</li>
+                           <li>Korean (B1)</li>
+                           <li>French (A2)</li>
+                           <li>Japanese (A1)</li>
+                        </ul>
+                    </div>
+                    <div>
+                         <h2>Work Rights & Clearances</h2>
+                        <ul class="list-disc pl-5 space-y-2">
+                           <li>Australian citizen; NZ citizen</li>
+                           <li>WWCC (expires 17/08/2029)</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
