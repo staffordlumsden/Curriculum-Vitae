@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print-Friendly Application Portfolio - Dr Stafford Lumsden</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Stylesheet -->
+    <style>
+        /* --- START STYLESHEET --- */
+        :root {
+            --bg-primary: #f9fafb;
+            --bg-secondary: #ffffff;
+            --bg-main: #f3f4f6;
+            --text-primary: #111827;
+            --text-secondary: #4b5563;
+            --border-color: #d1d5db;
+        }
+
+        /* Print-friendly version is always light mode */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-secondary); /* White background for print */
+            color: var(--text-primary);
+        }
+
+        main {
+            background-color: var(--bg-secondary);
+        }
+
+        .prose h2 { 
+            color: var(--text-primary);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.5rem; /* Larger for section breaks */
+            font-weight: 600;
+         }
+        .prose h3 { 
+            color: var(--text-primary);
+            margin-top: 2rem;
+            font-size: 1.25rem;
+        }
+        .prose p, .prose ul li, .prose ol li { color: var(--text-secondary); }
+        .prose strong { color: var(--text-primary); }
+        .prose ul li::marker, .prose ol li::marker { color: var(--text-secondary); }
+        
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .no-print {
+                display: none;
+            }
+            main {
+                box-shadow: none !important;
+                border: none !important;
+            }
+        }
+        /* --- END STYLESHEET --- */
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="w-full max-w-4xl mx-auto">
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-6">
+            <div>
+                <h1 class="text-2xl font-bold">Application Portfolio</h1>
+                <p class="text-base" style="color: var(--text-secondary);">Associate Advisor (Curriculum), Ref. 0140568</p>
+                <p class="text-base font-medium" style="color: var(--text-secondary);">Dr Stafford Lumsden</p>
+            </div>
+        </header>
+
+        <!-- Main Application Container -->
+        <main class="rounded-2xl shadow-2xl p-4 sm:p-6 md:p-8">
+            <div class="prose max-w-none">
+            
+                <!-- Section: About Me -->
+                <section>
+                    <h2>About Me</h2>
+                    <ul class="list-disc space-y-3 pl-5">
+                        <li><strong>Tertiary qualifications:</strong> I hold a PhD in Applied Linguistics, with a research focus on multimodal learning and curriculum design.</li>
+                        <li><strong>Complex process management:</strong> I lead curriculum development, mapping, and approval across undergraduate, postgraduate and HDR courses in the Sydney Law School</li>
+                        <li><strong>Higher education experience:</strong> I have held teaching and curriculum development roles at Sydney, Wollongong, UNSW, and Macquarie Universities, with over a decade of sector expertise.</li>
+                        <li><strong>Project management:</strong> I have successfully delivered faculty-wide initiatives on schedule and in alignment with governance and compliance requirements.</li>
+                        <li><strong>Policy analysis and report writing:</strong> I prepare policy briefs and governance submissions that inform Academic Board and faculty decisions.</li>
+                        <li><strong>Organisational and administrative skills:</strong> I coordinate multiple concurrent projects while maintaining attention to detail and compliance.</li>
+                        <li><strong>Interpersonal and communication skills:</strong> I work effectively with senior executives, governance committees, and diverse academic and professional staff, and I am known for producing clear, persuasive written communication.</li>
+                    </ul>
+                </section>
+
+                <!-- Section: Current Responsibilities -->
+                <section>
+                    <h2>Current Responsibilities</h2>
+                    <ul class="list-none space-y-4 pl-0">
+                        <li>
+                            <strong>Coordinate curriculum management processes and proposals</strong>
+                            <p>In my role at the Law School, I manage curriculum reviews, assessment redesign, and approval processes, including chairing the Unit Outline Approval Committee. This requires aligning unit and program designs with AQF expectations, CALD Threshold Learning Outcomes, Graduate Qualities, and governance requirements.</p>
+                        </li>
+                        <li>
+                            <strong>Support evidence-based education projects</strong>
+                            <p>I have led multiple initiatives grounded in research, including AI-enabled feedback pilots, competency-based assessment design, and research training reforms. These projects are evaluated against evidence of student learning and engagement, and I have secured funding through internal and national education grants.</p>
+                        </li>
+                         <li>
+                            <strong>Conduct policy research, analysis and reporting</strong>
+                            <p>I regularly prepare submissions for the Academic Board, Law Extension Committee, and LPAB governance review, drawing on TEQSA HESF, HESA compliance, and professional standards. These contributions demonstrate my ability to interpret complex policy and provide actionable advice.</p>
+                        </li>
+                        <li>
+                            <strong>Prepare briefs, submissions, and reports</strong>
+                            <p>My governance and project work requires producing clear, concise, and well-structured briefs and reports for senior leadership. Examples include submissions on AI in education, assessment policy, and student support initiatives, all of which informed faculty and university-level decision-making.</p>
+                        </li>
+                        <li>
+                            <strong>Build effective working relationships across the University</strong>
+                            <p>I collaborate with colleagues in the DVC Education portfolio, Library, and ADEs to deliver cross-faculty initiatives such as Just-in-Time research skills training and the LMS uplift project. I also liaise externally with UNSW and UNE as an expert consultant on AI in education, demonstrating my capacity to build productive networks.</p>
+                        </li>
+                        <li>
+                            <strong>Undertake ad-hoc curriculum projects</strong>
+                            <p>My portfolio includes diverse initiatives, from the Ngura competency-based assessment project to the development of AI literacy frameworks for undergraduate and postgraduate law. This variety shows my adaptability and capacity to deliver ad-hoc projects aligned with strategic priorities.</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Section: Selection Criteria Statement -->
+                <section>
+                    <h2>Selection Criteria Statement</h2>
+                    <div class="space-y-6">
+                        <div><h3>1. Tertiary qualifications in a relevant field and/or equivalent project management or research experience</h3><p>I hold a PhD in Applied Linguistics from Macquarie University, with a research focus on multimodal learning and curriculum design. This has equipped me with advanced skills in policy analysis, research design, and evidence-based curriculum development. My doctoral work was complemented by roles in educational design where I have applied project management methodologies to curriculum review, policy implementation, and assessment reform across multiple universities.</p></div>
+                        <div><h3>2. Demonstrated experience managing complex processes within large or multifaceted organisations</h3><p>In my current role as Educational Designer at Sydney Law School, I manage curriculum approval processes for over 300 units of study, coordinating between academics, professional staff, and governance bodies. As Chair of the Unit Outline Approval Committee, I oversee alignment with AQF, CALD Threshold Learning Outcomes, Graduate Qualities, and faculty standards. These processes involve managing competing stakeholder interests, strict governance timelines, and regulatory compliance. I have also contributed to whole-of-faculty projects such as the Canvas LMS Template Uplift, requiring coordination across academic and professional portfolios.</p></div>
+                        <div><h3>3. Experience working in the higher education or tertiary sector (desirable)</h3><p>I have over a decade of experience across leading Australian universities, including the University of Sydney, University of Wollongong, and Macquarie University. I have designed, implemented, and evaluated curriculum initiatives at both faculty and institutional levels, working closely with ADEs, the DVC Education portfolio, and Academic Board committees. My external engagements as a consultant on AI in education with UNSW and UNE further demonstrate my sectoral experience and credibility.</p></div>
+                        <div><h3>4. Proven project management experience, including delivering initiatives to deadlines and governance requirements</h3><p>I have led multiple high-profile projects, including the Law School LMS Template Uplift, the AI in Legal Education framework, and competency-based assessment initiatives for Ngura. Each project required planning, stakeholder consultation, and delivery against tight deadlines and governance requirements. For example, the LMS Uplift was delivered in alignment with the University’s strategic timeline for teaching readiness, ensuring universal design for learning principles were embedded while minimising staff training burden.</p></div>
+                        <div><h3>5. Strong skills in policy analysis, research and report writing</h3><p>I regularly prepare briefs, submissions, and reports for committees and governance bodies. Examples include submissions to the LPAB governance review, policy briefs on AI and assessment integrity, and compliance reports aligned with TEQSA HESF standards. My reports have directly informed Academic Board and faculty decisions, and my published research demonstrates my ability to integrate scholarship with applied policy recommendations.</p></div>
+                        <div><h3>6. Excellent organisational and administrative skills with attention to detail</h3><p>In my role, I manage simultaneous curriculum reforms, research ethics applications, and project deliverables. I developed a systematic approach to curriculum mapping that integrates unit learning outcomes with course learning outcomes and graduate qualities, ensuring compliance while providing clarity for academics. My administrative oversight ensures all curriculum documentation is accurate, consistent, and aligned with governance requirements.</p></div>
+                        <div><h3>7. Highly developed interpersonal, negotiation and written communication skills with the ability to work collaboratively across diverse stakeholder groups</h3><p>I work closely with senior academics, governance committees, and professional staff to deliver curriculum initiatives. For example, in leading the Just-in-Time research training initiative, I negotiated between the Library, DVC Education portfolio, and faculty units to design a shared delivery model. I have a reputation for producing clear, persuasive written communication, which has been critical in securing grant funding and in gaining support for curriculum reforms. My ability to engage across diverse groups is also evidenced by external consultancy roles, where I advise peer institutions on AI and educational design.</p></div>
+                    </div>
+                </section>
+                
+                <!-- Section: Role Alignment Analysis -->
+                <section>
+                    <h2>Role Alignment Analysis</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <h3>1. Alignment with Role Purpose</h3>
+                            <p><strong>The position is about supporting curriculum governance, policy, and project delivery at a whole-of-university level.</strong></p><p>As the Sydney Law School's Educational Designer, I lead strategic curriculum initiatives, chair governance processes (Unit outline approval committee) and liaise with senior executives and committees (eTools/Digital Education Committee, Academic Senate's Law Extension Committee). This demonstrates my extensive experience across academic, governance, and operational priorities at scale.</p>
+                        </div>
+                        <div>
+                            <h3>2. Key Responsibilities vs My Experience</h3>
+                            <ol type="a" class="ml-5 space-y-4"><li><strong>Coordinate curriculum management processes and proposals</strong><p>I manage curriculum reviews, assessment redesign, and LMS uplift projects for one of the University’s largest faculties. I have experience integrating CALD TLOs, AQF, CLOs, and Graduate Qualities into program structures — directly relevant to system-level curriculum management.</p></li><li><strong>Support evidence-based education projects</strong><p>My work on AI in law education, research ethics applications, and student feedback projects shows I already design and evaluate evidence-informed initiatives. I have a research background (PhD in Applied Linguistics) and am published in educational design, demonstrating strong scholarly underpinnings.</p></li><li><strong>Policy research, analysis and reporting</strong><p>I regularly interpret TEQSA HESF, HESA compliance, and NSW Supreme Court practice notes to advise on curriculum and assessment policy. My submissions to LPAB governance review and leadership in in AI policy show clear policy analysis and report-preparation skills.</p></li><li><strong>Prepare briefs, submissions, reports for governance committees</strong><p>I’ve prepared submissions and briefs for education committees at both School and University levels. I also write proposals that secure funding (e.g., grants, national WiL initiatives), proving I can produce persuasive, policy-aligned documents.</p></li><li><strong>Build working relationships with faculties, schools, operational units</strong><p>I already collaborate across USYD (Library, ADEs, DVC Education portfolio initiatives), as well as externally (UNSW, UNE, LPAB). This demonstrates my ability to engage beyond my faculty and build cooperative networks.</p></li><li><strong>Undertake ad-hoc curriculum projects</strong><p>My portfolio shows I thrive on diverse projects: LMS redesign, AI in curriculum, Ngura competency-based assessment, research training uplift, etc. This adaptability is directly what “ad-hoc” project work requires.</p></li></ol>
+                        </div>
+                        <div>
+                            <h3>3. Selection Criteria Fit</h3>
+                            <ul class="list-disc ml-5 space-y-2"><li><strong>Tertiary qualifications:</strong> I hold a PhD in Applied Linguistics with a strong curriculum/educational design research background.</li><li><strong>Managing complex processes:</strong> I coordinate curriculum and governance reforms across multiple programs with competing interests.</li><li><strong>Higher education sector experience:</strong> I have over a decade of experience across USYD, UoW, Macquarie, plus international university roles.</li><li><strong>Project management:</strong> I’ve led faculty-wide projects with strict timelines (e.g., AI rollout, Canvas uplift, curriculum mapping).</li><li><strong>Policy analysis & reporting:</strong> My experience is demonstrated in governance reviews, TEQSA/HESF alignment, and Senate committee work.</li><li><strong>Organisational/administrative skills:</strong> I have extensive experience managing large portfolios, assessment frameworks, and governance committees.</li><li><strong>Interpersonal and communication skills:</strong> I have a proven ability to negotiate with senior academics, policy-makers, and committees, and I am widely recognised for clarity and precision in my writing.</li></ul>
+                        </div>
+                        <div>
+                            <h3>4. Why I am a Strong Fit</h3>
+                            <ul class="list-disc ml-5 space-y-2"><li>I already operate at the intersection of curriculum, governance, and innovation within USYD.</li><li>I have the research and policy expertise (PhD, publications, TEQSA/HESF knowledge) to give intellectual weight to curriculum projects.</li><li>I bring proven project leadership — not just management, but also design, delivery, and evaluation.</li><li>I have credibility within the University, having delivered high-profile initiatives in law and beyond, with direct reporting to senior leaders.</li></ul>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="text-center mt-8">
+            <p class="text-sm" style="color: var(--text-secondary);">Built by Stafford Lumsden | Educational Designer</p>
+        </footer>
+    </div>
+</body>
+</html>
