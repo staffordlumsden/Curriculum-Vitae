@@ -1,479 +1,1345 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae - Stafford Lumsden</title>
-    
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dr Stafford Lumsden — Educational Designer, applied linguist and specialist in academic quality assurance, legal education, curriculum, assessment and responsible AI integration.">
+  <meta name="theme-color" content="#023a15">
+  <title>Dr Stafford Lumsden — Educational Designer & Applied Linguist</title>
 
-    <!-- Custom Stylesheet -->
-    <style>
-        /* --- START STYLESHEET --- */
-        :root {
-            --bg-primary: #f9fafb;
-            --bg-secondary: #ffffff;
-            --bg-main: #f3f4f6;
-            --text-primary: #111827;
-            --text-secondary: #4b5563;
-            --border-color: #d1d5db;
-            --input-bg: #ffffff;
-            --input-border: #d1d5db;
-            --input-text: #111827;
-            --input-placeholder: #9ca3af;
-        }
+  <style>
+    @font-face {
+      font-family: "GT";
+      src: url("https://greenlistapp.com/fonts/GT-Super-Display-Super.woff") format("woff");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Roboto";
+      src: url("https://greenlistapp.com/fonts/Roboto-Regular.woff") format("woff");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Roboto";
+      src: url("https://greenlistapp.com/fonts/Roboto-Bold.woff") format("woff");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
 
-        .dark-mode {
-            --bg-primary: #030712;
-            --bg-secondary: #111827;
-            --bg-main: #1f2937;
-            --text-primary: #f9fafb;
-            --text-secondary: #d1d5db;
-            --border-color: #4b5563;
-            --input-bg: #111827;
-            --input-border: #4b5563;
-            --input-text: #e5eb;
-            --input-placeholder: #9ca3af;
-        }
+    :root {
+      --background: #ffffff;
+      --surface: #ffe6e2;
+      --text: #000000;
+      --danger: #f09c96;
+      --theme: #023a15;
+      --border: rgba(0,0,0,.16);
+      --muted: rgba(0,0,0,.66);
+      --faint: rgba(0,0,0,.48);
+      --overlay-shadow: rgba(0, 0, 0, 0.1) 0 20px 60px 0;
+      --r-sm: 4px;
+      --r-md: 10px;
+      --r-lg: 15px;
+      --page: 1280px;
+    }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            transition: background-color 0.3s, color 0.3s;
-        }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: "Roboto", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible, summary:focus-visible {
+      outline: 3px solid var(--danger);
+      outline-offset: 4px;
+    }
 
-        main {
-            background-color: var(--bg-secondary);
-        }
-        
-        #theme-toggle-btn {
-            color: var(--text-secondary);
-        }
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: -64px;
+      padding: 8px 16px;
+      background: var(--theme);
+      color: var(--background);
+      border-radius: var(--r-md);
+      z-index: 100;
+    }
+    .skip-link:focus { top: 16px; }
 
-        #theme-toggle-btn:hover {
-            color: var(--text-primary);
-        }
+    .wrap {
+      width: min(calc(100% - 32px), var(--page));
+      margin: 0 auto;
+    }
 
-        .prose h2 { 
-            color: var(--text-primary);
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-            margin-top: 2.5rem;
-            font-size: 1.25rem;
-            font-weight: 600;
-         }
-        .prose h3 {
-            color: var(--text-primary);
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-        .prose p, .prose ul li { color: var(--text-secondary); }
-        .prose strong { color: var(--text-primary); }
-        .prose ul li::marker { color: var(--text-secondary); }
-        .prose a { color: var(--text-primary); text-decoration: underline; }
-        .prose hr {
-            border-color: var(--border-color);
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-        }
-        /* --- END STYLESHEET --- */
-    </style>
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand {
+      font-family: "GT", Georgia, serif;
+      font-size: 24px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .brand span { color: var(--theme); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-size: 14px;
+      padding: 8px 12px;
+      border-radius: var(--r-md);
+    }
+    .nav-links a:hover,
+    .nav-links a[aria-current="true"] {
+      background: var(--surface);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 40px;
+      padding: 8px 16px;
+      border: 1px solid var(--theme);
+      border-radius: var(--r-md);
+      background: var(--theme);
+      color: var(--background);
+      font: 700 14px/1.2 "Roboto", Arial, sans-serif;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .button:hover { opacity: .9; }
+    .button.ghost {
+      background: transparent;
+      color: var(--theme);
+    }
+
+    main { overflow: hidden; }
+
+    .hero {
+      min-height: 640px;
+      display: grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap: 64px;
+      align-items: center;
+      padding: 64px 0;
+    }
+    .eyebrow,
+    .section-kicker,
+    .meta-label {
+      display: inline-block;
+      font-size: 12px;
+      line-height: 1.2;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--theme);
+    }
+    h1, h2, h3 {
+      font-family: "GT", Georgia, serif;
+      margin: 0;
+      line-height: 1.08;
+      font-weight: 400;
+    }
+    h1 {
+      font-size: clamp(48px, 7vw, 88px);
+      max-width: 900px;
+      letter-spacing: -.03em;
+    }
+    h2 {
+      font-size: clamp(36px, 5vw, 60px);
+      letter-spacing: -.02em;
+    }
+    h3 { font-size: 24px; }
+    p { margin: 0; }
+
+    .hero .eyebrow { margin-bottom: 16px; }
+    .hero-lead {
+      max-width: 760px;
+      margin-top: 24px;
+      font-size: clamp(18px, 2vw, 22px);
+      line-height: 1.5;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+    .hero-note {
+      margin-top: 24px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .hero-card {
+      background: var(--surface);
+      border-radius: var(--r-lg);
+      padding: 32px;
+      min-height: 440px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .hero-card .big-mark {
+      font-family: "GT", Georgia, serif;
+      font-size: 92px;
+      line-height: .9;
+      color: var(--theme);
+    }
+    .profile-photo-wrap {
+      width: 180px;
+      max-width: 100%;
+      aspect-ratio: 1;
+      border-radius: 999px;
+      overflow: hidden;
+      background: transparent;
+      isolation: isolate;
+      display: grid;
+      place-items: center;
+    }
+    .profile-photo {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 999px;
+      mix-blend-mode: multiply;
+      background: transparent;
+    }
+
+    .trusted {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 32px 0;
+    }
+    .trusted-inner {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .trusted-title {
+      font-family: "GT", Georgia, serif;
+      font-size: 24px;
+      line-height: 1.2;
+      margin: 0;
+    }
+    .trusted-logos {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 32px;
+      align-items: center;
+    }
+    .trusted-logo {
+      min-height: 104px;
+      display: grid;
+      place-items: center;
+      padding: 8px;
+    }
+    .trusted-logo img {
+      display: block;
+      width: 100%;
+      max-width: 108px;
+      max-height: 92px;
+      object-fit: contain;
+    }
+    .hero-card dl {
+      margin: 32px 0 0;
+      display: grid;
+      gap: 16px;
+    }
+    .hero-card dt {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-weight: 700;
+      color: var(--theme);
+    }
+    .hero-card dd {
+      margin: 4px 0 0;
+      font-size: 16px;
+    }
+
+    .section {
+      padding: 96px 0;
+      border-top: 1px solid var(--border);
+    }
+    .section-heading {
+      display: grid;
+      grid-template-columns: .6fr 1.4fr;
+      gap: 64px;
+      align-items: start;
+      margin-bottom: 48px;
+    }
+    .section-heading .section-kicker { margin-top: 12px; }
+    .section-intro {
+      max-width: 760px;
+      margin-top: 20px;
+      font-size: 18px;
+      color: var(--muted);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .prose {
+      display: grid;
+      gap: 20px;
+      max-width: 800px;
+      font-size: 18px;
+    }
+    .prose strong { color: var(--theme); }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .stat {
+      background: var(--surface);
+      border-radius: var(--r-md);
+      padding: 24px;
+      min-height: 152px;
+    }
+    .stat .value {
+      display: block;
+      font-family: "GT", Georgia, serif;
+      font-size: 42px;
+      line-height: 1;
+      margin-top: 16px;
+    }
+    .stat .label {
+      display: block;
+      margin-top: 8px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .capability-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .capability-card {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      min-height: 224px;
+    }
+    .capability-card:nth-child(2n) { background: var(--surface); }
+    .capability-card .num {
+      font-family: "GT", Georgia, serif;
+      font-size: 28px;
+      color: var(--theme);
+    }
+    .capability-card h3 { margin-top: 32px; }
+    .capability-card p {
+      margin-top: 12px;
+      color: var(--muted);
+    }
+
+    .feature {
+      background: var(--theme);
+      color: var(--background);
+      border-radius: var(--r-lg);
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 40px;
+      align-items: end;
+      margin-bottom: 32px;
+    }
+    .feature .section-kicker { color: var(--surface); }
+    .feature p {
+      margin-top: 16px;
+      max-width: 760px;
+      color: rgba(255,255,255,.82);
+    }
+    .feature-meta {
+      border-left: 1px solid rgba(255,255,255,.4);
+      padding-left: 32px;
+    }
+    .feature-meta div + div { margin-top: 16px; }
+    .feature-meta .meta-label { color: var(--surface); }
+
+    .timeline {
+      border-top: 1px solid var(--border);
+    }
+    details.role {
+      border-bottom: 1px solid var(--border);
+    }
+    details.role summary {
+      list-style: none;
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: 1fr 260px 40px;
+      gap: 24px;
+      align-items: center;
+      padding: 24px 0;
+    }
+    details.role summary::-webkit-details-marker { display: none; }
+    .role-title {
+      font-family: "GT", Georgia, serif;
+      font-size: 24px;
+    }
+    .role-org {
+      margin-top: 4px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .role-date {
+      text-align: right;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .toggle {
+      width: 32px;
+      height: 32px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 20px;
+      transition: transform .15s ease;
+    }
+    details[open] .toggle { transform: rotate(45deg); }
+    .role-body {
+      max-width: 900px;
+      padding: 0 0 32px;
+      color: var(--muted);
+    }
+    .role-body ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .role-body li + li { margin-top: 8px; }
+
+    .qualification-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .qualification {
+      background: var(--surface);
+      border-radius: var(--r-md);
+      padding: 24px;
+      min-height: 156px;
+    }
+    .qualification small {
+      display: block;
+      font-size: 12px;
+      color: var(--theme);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-weight: 700;
+    }
+    .qualification h3 { margin-top: 16px; }
+    .qualification p { margin-top: 8px; color: var(--muted); }
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+    .research-card {
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 24px;
+      min-height: 196px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .research-card:nth-child(2),
+    .research-card:nth-child(4) { background: var(--surface); }
+    .research-card .research-num {
+      font-family: "GT", Georgia, serif;
+      color: var(--theme);
+      font-size: 24px;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .filter {
+      border: 1px solid var(--border);
+      background: var(--background);
+      color: var(--text);
+      border-radius: var(--r-md);
+      padding: 8px 12px;
+      font: 700 13px/1.2 "Roboto", Arial, sans-serif;
+      cursor: pointer;
+    }
+    .filter:hover, .filter.active {
+      background: var(--theme);
+      color: var(--background);
+      border-color: var(--theme);
+    }
+
+    .pub-list {
+      display: grid;
+      gap: 0;
+      border-top: 1px solid var(--border);
+    }
+    .pub {
+      display: grid;
+      grid-template-columns: 96px 1fr 120px;
+      gap: 24px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+    }
+    .pub[hidden] { display: none; }
+    .pub-year {
+      font-family: "GT", Georgia, serif;
+      font-size: 28px;
+      color: var(--theme);
+    }
+    .pub-title {
+      font-family: "GT", Georgia, serif;
+      font-size: 20px;
+      line-height: 1.25;
+    }
+    .pub-citation {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .pub-link {
+      justify-self: end;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--theme);
+      text-underline-offset: 4px;
+    }
+
+    .recognition-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .recognition {
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 24px;
+    }
+    .recognition:nth-child(1),
+    .recognition:nth-child(4),
+    .recognition:nth-child(5) { background: var(--surface); }
+    .recognition .year {
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: .1em;
+      color: var(--theme);
+    }
+    .recognition h3 { margin-top: 12px; }
+    .recognition p { margin-top: 8px; color: var(--muted); }
+
+    .tools {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .tool-group {
+      border-top: 4px solid var(--theme);
+      padding-top: 16px;
+    }
+    .tool-group h3 { font-size: 20px; }
+    .tool-group p { margin-top: 12px; color: var(--muted); }
+
+    .contact {
+      background: var(--surface);
+      border-radius: var(--r-lg);
+      padding: 64px;
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 48px;
+      align-items: end;
+    }
+    .contact p {
+      max-width: 680px;
+      margin-top: 20px;
+      font-size: 18px;
+      color: var(--muted);
+    }
+    .contact-links {
+      display: grid;
+      gap: 12px;
+      justify-items: stretch;
+    }
+
+    footer {
+      padding: 32px 0;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--faint);
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 980px) {
+      .nav-links a:not(.nav-cta) { display: none; }
+      .hero, .about-grid, .section-heading, .feature, .contact {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .trusted-inner {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .trusted-logos {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 16px;
+      }
+      .hero { min-height: 0; }
+      .hero-card { min-height: 320px; }
+      .capability-grid { grid-template-columns: repeat(2, 1fr); }
+      .research-grid, .tools { grid-template-columns: repeat(2, 1fr); }
+      .feature-meta { border-left: 0; border-top: 1px solid rgba(255,255,255,.4); padding: 24px 0 0; }
+    }
+
+    @media (max-width: 680px) {
+      .wrap { width: min(calc(100% - 24px), var(--page)); }
+      .nav { min-height: 64px; }
+      .brand { font-size: 20px; }
+      .nav-cta { padding: 8px 12px; }
+      .hero { padding: 48px 0 64px; gap: 32px; }
+      h1 { font-size: 48px; }
+      h2 { font-size: 36px; }
+      .section { padding: 64px 0; }
+      .stats,
+      .capability-grid,
+      .qualification-grid,
+      .research-grid,
+      .recognition-grid,
+      .tools { grid-template-columns: 1fr; }
+      .trusted-logos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px 24px;
+      }
+      .trusted-logo:last-child {
+        grid-column: 1 / -1;
+      }
+      details.role summary {
+        grid-template-columns: 1fr 32px;
+        gap: 16px;
+      }
+      .role-date {
+        grid-column: 1 / 2;
+        grid-row: 2;
+        text-align: left;
+      }
+      .toggle {
+        grid-column: 2;
+        grid-row: 1 / 3;
+      }
+      .pub {
+        grid-template-columns: 64px 1fr;
+        gap: 16px;
+      }
+      .pub-link {
+        grid-column: 2;
+        justify-self: start;
+      }
+      .contact { padding: 32px 24px; }
+    }
+
+    @media print {
+      .site-header, .hero-actions, .filters, .contact-links { display: none !important; }
+      .section { padding: 32px 0; break-inside: avoid; }
+      .hero { min-height: auto; padding: 24px 0; }
+      .hero-card { min-height: auto; }
+      details.role:not([open]) .role-body { display: block; }
+      details.role summary .toggle { display: none; }
+      a { text-decoration: none; }
+      .contact { padding: 24px; }
+    }
+  </style>
 </head>
-<body class="p-4 md:p-8">
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="w-full max-w-4xl mx-auto">
-        <!-- Header -->
-        <header class="flex justify-between items-start mb-6">
-            <div class="text-left">
-                <h1 class="text-3xl font-bold">Stafford Lumsden</h1>
-                <div class="text-base mt-2 space-y-1" style="color: var(--text-secondary);">
-                    <p>701/527 Princes Hwy Rockdale NSW 2216</p>
-                    <p>
-                        Email: <a href="mailto:stafford.lumsden@gmail.com" class="prose">stafford.lumsden@gmail.com</a> | 
-                        Ph: +61(0)459716964
-                    </p>
-                    <p>
-                        Web: <a href="http://stafford.net.nz" class="prose">http://stafford.net.nz</a> | 
-                        Linkedin: <a href="https://www.linkedin.com/in/safford-lumsden" class="prose">linkedin.com/in/safford-lumsden</a>
-                    </p>
-                </div>
-            </div>
-            <button id="theme-toggle-btn" class="p-2 rounded-full flex-shrink-0 ml-4 focus:outline-none focus:ring-2 focus:ring-offset-2" style="--ring-offset-color: var(--bg-primary); --ring-color: var(--text-secondary);">
-                <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
-                <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
-            </button>
-        </header>
-
-        <!-- Main Application Container -->
-        <main class="p-8 rounded-2xl shadow-2xl">
-            <div class="prose max-w-none">
-                <section>
-                    <h2>Professional Profile</h2>
-                    <p>I am a Learning & Organisational Development leader and Educational and curriculum design specialist with 15+ years experience in higher education. My designs are evidence-based, and culturally competent. I have extensive experience leading initiatives across complex higher education, public service, and international settings. My track record includes leading the design and delivery of professional development programs, advising senior academics on curriculum and assessment strategy, leading governance initiatives, and running multi-stakeholder projects funded through competitive grants. I am known for data-informed decision-making, inclusive practice, and building high-performing teams that deliver measurable outcomes.</p>
-                </section>
-                
-                <section>
-                    <h2>Key Capabilities</h2>
-                    <ul class="list-none pl-0 space-y-2">
-                        <li><strong>Culture & change</strong> — Designed and delivered faculty-wide PD programs; chaired unit governance to drive consistency and quality; contributed to interdisciplinary improvement groups.</li>
-                        <li><strong>Leadership development</strong> — Built leader’s capacity via workshops, mentoring and induction programs for academic staff and instructors and practitioners, facilitated communities of practice.</li>
-                        <li><strong>Strategy & project management</strong> — Led multiple funded education projects and secured national funding to scale work-integrated learning; reported insights to leadership to inform decisions.</li>
-                        <li><strong>Data-informed practice</strong> — Managed academic quality through analysis of performance, feedback, retention and attrition; applied analytics tools (NVivo, SPSS, PowerBI etc.) to evaluate initiatives.</li>
-                        <li><strong>Stakeholder engagement</strong> — Worked across faculties, central committees and external partners (publishers, universities); coordinated with senior leaders and multidisciplinary teams.</li>
-                        <li><strong>Inclusive practice</strong> — Designed learning that supports diverse cohorts; presented on cultural competence in legal education.</li>
-                        <li><strong>Digital enablement</strong> — Deep experience with LMS (Canvas, Moodle, Blackboard), collaboration and analytics stacks; created and maintained responsible GenAI resources for staff/students.</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h2>Career History</h2>
-                    <div class="space-y-6">
-                        <div>
-                            <h3>Higher Education Consultancy</h3>
-                            <p><strong>Principal</strong> (June 2023 – Present)</p>
-                            <p class="italic">Bespoke educational design consultancy focusing on legal education and public sector L&D</p>
-                            <p class="mt-2" style="color: var(--text-primary);"><strong>Highlights & Impact</strong></p>
-                            <ul class="list-disc pl-5 space-y-1 mt-1">
-                                <li>Engaged by LPAB/LEC to provide advice on assessment for admission to the profession, Online and hybrid learning for units delivering prescribed areas of knowledge (Priestly 11). Learning Management System design and templating, educational governance and standards.</li>
-                                <li>Designed Artificial Intelligence policies for core and elective units of study in the Diploma of Laws, designed implementation strategy.</li>
-                                <li>Reviewed Office of the Director of Public Prosecutions Role Mapped Training Program for ODPP continued professional development uplift.</li>
-                                <li>Designed modules and units for level 1 – 3 solicitors, Managing Solicitors and Solicitors Advocate in trial preparation, client conferencing, appeals, and Human Resources.</li>
-                                <li>Provided blueprints to in-house educational designers for implementation in SAP SuccessFactors LMS.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3>University of Sydney Law School</h3>
-                            <p><strong>Educational Designer</strong> (Feb 2023 – Present)</p>
-                             <p class="italic">Leading and supporting educational design in the LLB, JD, LLM, Specialist Masters, and Research programs.</p>
-                            <p class="mt-2" style="color: var(--text-primary);"><strong>Highlights & Impact</strong></p>
-                            <ul class="list-disc pl-5 space-y-1 mt-1">
-                                <li>Delivered a professional learning program (workshops/seminars) to uplift teaching capability and align practice with school priorities.</li>
-                                <li>Partnered with Associate Dean (Education) on the LLB/JD curriculum review (2023–2025), ensuring quality, consistency and compliance.</li>
-                                <li>Chaired the Unit Outline Approval Committee to strengthen governance and reduce variability in unit documentation.</li>
-                                <li>Contributed to Academic Excellence and eTools committees to drive evidence-based improvement.</li>
-                                <li>Led three funded education projects (AUD $40k, $38k, $80k) and secured $100k NPLF to expand Work Integrated Learning (2023–2024).</li>
-                                <li>Built Canvas resources and responsible GenAI guidance for staff and students to improve efficiency and learner experience.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <button data-toggle-target="#wollongong-content" class="toggle-trigger flex justify-between items-center w-full text-left rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 p-2 -m-2">
-                                <div>
-                                    <h3 class="!m-0">University of Wollongong</h3>
-                                    <p class="!m-0"><strong>Educational Developer</strong> (Jul 2018 – Jan 2023)</p>
-                                </div>
-                                <svg class="w-5 h-5 transform transition-transform chevron-icon flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                            </button>
-                            <div id="wollongong-content" class="hidden mt-2 pl-4 border-l-2" style="border-color: var(--border-color);">
-                                <p class="italic">Interdisciplinary educational design and academic development support across multiple schools/faculties.</p>
-                                <p class="mt-2" style="color: var(--text-primary);"><strong>Highlights & Impact</strong></p>
-                                <ul class="list-disc pl-5 space-y-1 mt-1">
-                                    <li>Delivered a professional learning program (workshops/seminars) to uplift teaching capability.</li>
-                                    <li>Designed curriculum and assessment aligned to institutional models and outcomes; advised on pedagogy and assessment.</li>
-                                    <li>Served on curriculum review committees; managed team SharePoint; produced leadership reports to inform decision-making.</li>
-                                    <li>Delivered educator capability uplift via workshops and practical training; convened communities of practice.</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div>
-                             <button data-toggle-target="#sookmyung-yl-content" class="toggle-trigger flex justify-between items-center w-full text-left rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 p-2 -m-2">
-                                <div>
-                                    <h3 class="!m-0">Sookmyung Women’s University (Seoul)</h3>
-                                    <p class="!m-0"><strong>Program Coordinator, YL TESOL</strong> (Jul 2017 – Jul 2018)</p>
-                                </div>
-                                <svg class="w-5 h-5 transform transition-transform chevron-icon flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                            </button>
-                            <div id="sookmyung-yl-content" class="hidden mt-2 pl-4 border-l-2" style="border-color: var(--border-color);">
-                                <p class="italic">Leading departmental process improvement and educational delivery.</p>
-                                <p class="mt-2" style="color: var(--text-primary);"><strong>Highlights & Impact</strong></p>
-                                 <ul class="list-disc pl-5 space-y-1 mt-1">
-                                    <li>Delivered and managed academic quality (performance, feedback, retention, attrition) and scheduling for nine full-time faculty.</li>
-                                    <li>Designed and implemented plans for uplift of hybrid and fully online delivery of courses.</li>
-                                    <li>Designed targeted professional development with observation/feedback; led induction and department meetings; engaged external partners.</li>
-                                    <li>Advised central university on advertising and marketing, student recruitment, retention.</li>
-                                    <li>Conducted strategic uplift of student feedback mechanisms, implemented data-driven reforms of practice in collaboration with senior academics and university leadership.</li>
-                                    <li>Taught undergraduate and postgraduate courses in Education and Applied Linguistics.</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div>
-                             <button data-toggle-target="#sookmyung-online-content" class="toggle-trigger flex justify-between items-center w-full text-left rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 p-2 -m-2">
-                                <div>
-                                    <h3 class="!m-0">Sookmyung Women’s University (Seoul)</h3>
-                                    <p class="!m-0"><strong>Program Coordinator, Online TESOL</strong> (Aug 2013 – Jul 2018)</p>
-                                </div>
-                                <svg class="w-5 h-5 transform transition-transform chevron-icon flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                            </button>
-                             <div id="sookmyung-online-content" class="hidden mt-2 pl-4 border-l-2" style="border-color: var(--border-color);">
-                                <p class="italic">Ground-up design, development, delivery and monitoring of national-first online education program in collaboration with multiple international academic publishers. Teaching undergraduate and postgraduate courses in Education and Applied Linguistics.</p>
-                                 <p class="mt-2" style="color: var(--text-primary);"><strong>Highlights & Impact</strong></p>
-                                 <ul class="list-disc pl-5 space-y-1 mt-1">
-                                    <li>Delivered and managed academic quality (performance, feedback, retention, attrition) and scheduling for nine.</li>
-                                    <li>Evaluated/selected Learning Management System and educational design/resource tools.</li>
-                                    <li>Provided professional development to staff and training to students (remote).</li>
-                                    <li>Mentored online instructors.</li>
-                                    <li>Analysed student data and online learning analytics to sustain educational quality.</li>
-                                    <li>Led teams delivering web-enhanced, blended and fully online programs at postgraduate level.</li>
-                                    <li>Taught undergraduate and postgraduate courses in Education and Applied Linguistics.</li>
-                                </ul>
-                            </div>
-                        </div>
-                         <div>
-                             <button data-toggle-target="#ybm-content" class="toggle-trigger flex justify-between items-center w-full text-left rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 p-2 -m-2">
-                                <div>
-                                    <h3 class="!m-0">YBM Premier (Daegu)</h3>
-                                    <p class="!m-0"><strong>Academic Supervisor</strong> (Jan 2013 – Jul 2013)</p>
-                                </div>
-                                <svg class="w-5 h-5 transform transition-transform chevron-icon flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                            </button>
-                            <div id="ybm-content" class="hidden mt-2 pl-4 border-l-2" style="border-color: var(--border-color);">
-                                <p class="italic">Building instructor capacity in highly competitive education market</p>
-                                 <p class="mt-2" style="color: var(--text-primary);"><strong>Highlights & Impact</strong></p>
-                                 <ul class="list-disc pl-5 space-y-1 mt-1">
-                                    <li>Led a mixed team (10 native-speaker + 12–15 Korean instructors, 1 Japanese instructor).</li>
-                                    <li>Workforce scheduling, payroll duties.</li>
-                                    <li>Instructor mentoring, observations, delivery of professional development workshop.</li>
-                                    <li>Contributed to a national curriculum reaching approx. 130,000 students monthly.</li>
-                                    <li>Taught English language learners CEFR A1 – C2.</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div>
-                             <button data-toggle-target="#gyeongin-content" class="toggle-trigger flex justify-between items-center w-full text-left rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 p-2 -m-2">
-                                <div>
-                                    <h3 class="!m-0">Gyeongin National University of Education</h3>
-                                    <p class="!m-0"><strong>Lead Teacher Trainer</strong> (Dec 2012 – Dec 2013)</p>
-                                </div>
-                                <svg class="w-5 h-5 transform transition-transform chevron-icon flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                            </button>
-                             <div id="gyeongin-content" class="hidden mt-2 pl-4 border-l-2" style="border-color: var(--border-color);">
-                                <p class="italic">Leading newly established postgraduate program in Education and Applied Linguistics.</p>
-                                <p class="mt-2" style="color: var(--text-primary);"><strong>Highlights & Impact</strong></p>
-                                 <ul class="list-disc pl-5 space-y-1 mt-1">
-                                    <li>Designed a new postgraduate certificate in collaboration with Australian university.</li>
-                                    <li>Introduced web-enhanced delivery of programs via Blackboard.</li>
-                                    <li>Built professional development programs and established community of practice among small instructor cohort.</li>
-                                    <li>Taught postgraduate courses in Education and Applied Linguistics.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <section>
-                    <h2>Education</h2>
-                     <ul class="list-none pl-0 space-y-2">
-                        <li><strong>GenAI for Cybersecurity Professional</strong>, International Business Machines (IBM)</li>
-                        <li><strong>PhD (Applied Linguistics)</strong>, Macquarie University — MQRES Scholarship (2019–2021)</li>
-                        <li><strong>M Res. (Educational Research)</strong>, Macquarie University — RTP Scholarship (2017–2018)</li>
-                        <li><strong>MA TESOL (Applied Linguistics)</strong>, Victoria University of Wellington</li>
-                        <li><strong>BA (Political Science)</strong>, University of Auckland</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h2>Achievements</h2>
-                     <ul class="list-none pl-0 space-y-3">
-                        <li>
-                            <p><strong>Competitive funding:</strong></p>
-                            <ul class="list-disc pl-5 space-y-1">
-                                <li>three education grants (AUD $40k/$38k/$80k) and $100k NPLF to scale WIL (2024–2025).</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <p><strong>Awards/recognition:</strong></p>
-                             <ul class="list-disc pl-5 space-y-1">
-                                <li>Named an AI Thought Leader by the Governance Institute of Australia (2025).</li>
-                                <li>AFR Higher Education Award (Learning Experience) 2021 winner.</li>
-                                <li>Multiple university awards/nominations.</li>
-                                <li>Gangnam Mayoral Award for Teaching.</li>
-                            </ul>
-                        </li>
-                         <li>
-                            <p><strong>Organisation:</strong></p>
-                             <ul class="list-disc pl-5 space-y-1">
-                                <li>Organised multiple events and panels on AI including senior members of the legal profession, members of the federal bench and legal educators.</li>
-                                <li>Led multiple national and international conference organising groups.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </section>
-
-                <section>
-                    <button data-toggle-target="#skills-content" class="toggle-trigger flex justify-between items-center w-full text-left">
-                         <h2 class="!m-0 !p-0 !border-0">Professional Skills</h2>
-                         <svg class="w-5 h-5 transform transition-transform chevron-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                    </button>
-                    <div id="skills-content" class="hidden mt-4">
-                        <ul class="list-none pl-0 space-y-2">
-                            <li><strong>OD & L&D:</strong> program design, leadership capability, induction, coaching, facilitation, evaluation.</li>
-                            <li><strong>Governance & quality:</strong> committee leadership, approval workflows, policy alignment, reporting.</li>
-                            <li><strong>Data & analytics:</strong> NVivo, SPSS; survey/feedback analysis; dashboards.</li>
-                            <li><strong>Platforms:</strong> Canvas, Moodle, Blackboard; H5P, Articulate, Captivate; MS Teams, Zoom; SharePoint, Loop/Notion.</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <section>
-                    <h2>Diversity, Inclusion & Cultural Safety</h2>
-                    <p>Experience designing inclusive learning curricula for diverse cohorts and presenting on cultural competence in legal education; committed to accessible, values-driven practice. Experience with UDL, accessibility standards, Disability Discrimination Act 1992 (Cth) requirements in online and in-person teaching and learning contexts. I completed the University of Sydney Culturally Competent Leadership Program in 2024.</p>
-                </section>
-                
-                <section>
-                    <h2>Select Bibliography</h2>
-                     <p>I have authored a growing number of book chapters and articles on multimodality, learning design and responsible AI in education and frequently present at national and international conferences.</p>
-                    <ul class="list-disc pl-5 space-y-3 text-sm mt-3">
-                        <li>Lumsden, S. (2025). <em>Making sense of multimodality and social semiotics in TESOL</em>. The English Connection 29(2) 6-8.</li>
-                        <li>Lumsden, S. (2025). A multimodal social semiotic approach to TESOL educator professional development in A. Alm, C. Lai, and Q Ma (Eds.) <em>Transitions in CALL</em>, Castledown.</li>
-                        <li>Lumsden, S. (2024, September). A multimodal social semiotic approach to TESOL educator professional development. In <em>Proceedings of the International CALL Research Conference</em> (Vol. 2024, pp. 163-168). https://doi.org/10.29140/9780648184485-25</li>
-                        <li>Lumsden, S., Djonov, E, & Slatyer, H (2024) The Multimodal Community of Inquiry: A framework for evaluating online learning environments in higher education. In V. Lim & M. Querol-Julián M. (Eds.) <em>Designing Learning with Digital Technologies: Perspectives from Multimodality in Education</em>, Routledge.</li>
-                        <li>Lumsden, S. (2023) Student Writing Support with Generative Artificial Intelligence. <em>The English Connection 27</em>(3) 7 – 12.</li>
-                        <li>Lumsden, S. (2022) <em>A Multimodal Social Semiotic Approach to The Community of Inquiry Framework</em>. [Doctoral Thesis], Macquarie University, NSW, Australia. https://doi.org/10.13140/RG.2.2.20212.83846</li>
-                        <li>Lumsden, S. (2018) <em>The Relationship Between Teaching Presence and Online Instructor Satisfaction in an Online Teacher Training Program</em>. [Master’s Thesis], Macquarie University, NSW, Australia. http://dx.doi.org/10.13140/RG.2.2.18535.11688</li>
-                        <li>Lumsden, S. (2011) Evaluating CALL Materials: How About an iPhone? <em>Proceedings of PAC 2010 – The Pan-Asia Conference / the 18th Annual KOTESOL International Conference, Seoul, Korea: Korea TESOL</em> 147-159 https://koreatesol.org/sites/default/files/pdf_publications/KOTESOL-Proceeds2010web.pdf</li>
-                    </ul>
-                </section>
-
-                <hr />
-
-                <section>
-                     <button data-toggle-target="#presentations-content" class="toggle-trigger flex justify-between items-center w-full text-left">
-                         <h2 class="!m-0 !p-0 !border-0">Presentations</h2>
-                         <svg class="w-5 h-5 transform transition-transform chevron-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                    </button>
-                    <div id="presentations-content" class="hidden mt-4">
-                        <ul class="list-disc pl-5 space-y-3 text-sm">
-                            <li>A multimodal social semiotic approach to TESOL educator professional development – XXII CALL Research Conference, Waseda University Law School, Tokyo, September 2024.</li>
-                            <li>Streamlining Feedback and Deepening Understanding with Gen AI Agents – Australasian Legal Education and Generative AI Showcase, Monash University, September 2024</li>
-                            <li>Cogniti AI chatbots for academics and teaching teams – Common Law Week- University of New England Law School, August 2024</li>
-                            <li>Cultural competence in legal education settings – University of Sydney Law School, May 2024</li>
-                            <li>Research education and generative AI – Sydney University Unconference 2024, Sydney University, February 2024</li>
-                            <li>A Research Agenda for Legal Education – Legal Education Conference 2023, University of New South Wales, November 2023</li>
-                            <li>Towards a Multimodal Community of Inquiry Framework – Association of Academic Language and Learning International Conference, November 2021.</li>
-                            <li>Concepts to consider in course design and layout of TESOL courses delivered online – University of Sydney Law School, 14th University of Sydney TESOL Research Network Colloquium, September 2019</li>
-                            <li>Teaching Presence Guidelines for Online Instruction – Japan Assoc. of Language Teachers, Tokyo, November 2017</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <hr />
-
-                <section>
-                    <button data-toggle-target="#law-design-content" class="toggle-trigger flex justify-between items-center w-full text-left">
-                         <h2 class="!m-0 !p-0 !border-0">Educational Design – Law Specific</h2>
-                         <svg class="w-5 h-5 transform transition-transform chevron-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                    </button>
-                    <div id="law-design-content" class="hidden mt-4">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8">
-                            <div>
-                                 <p><strong>Undergraduate</strong></p>
-                                 <p>Torts, Criminal Law Process & Research, Criminal & Civil Procedure, Public Law & Statutory Interpretation, Corporations Law, Equity, Evidence, Advanced Evidence, Chinese Laws and Legal System, Competition Law, Family Law, Federal Constitutional Law,</p>
-                            </div>
-                             <div>
-                                <p><strong>Postgraduate</strong></p>
-                                <p>Legal Reasoning & The Common Law, War Law, Environmental Dispute Resolution, International Commercial Arbitration, International Contracts, Advanced Criminal Law, Philosophy of Law.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <hr />
-
-                 <section>
-                    <button data-toggle-target="#curriculum-design-content" class="toggle-trigger flex justify-between items-center w-full text-left">
-                         <h2 class="!m-0 !p-0 !border-0">Curriculum Design</h2>
-                         <svg class="w-5 h-5 transform transition-transform chevron-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                    </button>
-                     <div id="curriculum-design-content" class="hidden mt-4">
-                        <ul class="list-disc pl-5 space-y-2">
-                            <li>Bachelor of Laws (University of Sydney, 2023-2025)</li>
-                            <li>Juris Doctor (University of Sydney, 2023-2025)</li>
-                            <li>Master of Laws (University of Sydney, 2024 – Present)</li>
-                            <li>Master of Taxation, Master of Criminology, (University of Sydney, 2023-2024)</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <hr />
-                
-                <section class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
-                    <div>
-                        <h2>Languages</h2>
-                        <ul class="list-disc pl-5 space-y-2">
-                           <li>English (native)</li>
-                           <li>Korean (B1)</li>
-                           <li>French (A2)</li>
-                           <li>Japanese (A1)</li>
-                        </ul>
-                    </div>
-                    <div>
-                         <h2>Work Rights & Clearances</h2>
-                        <ul class="list-disc pl-5 space-y-2">
-                           <li>Australian citizen; NZ citizen</li>
-                           <li>WWCC (expires 17/08/2029)</li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
-        </main>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Stafford Lumsden home">Stafford <span>Lumsden</span></a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#experience">Experience</a>
+        <a href="#scholarship">Scholarship</a>
+        <a href="#publications">Publications</a>
+        <a class="button nav-cta" href="#contact">Contact</a>
+      </nav>
     </div>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // --- Theme Toggle Logic ---
-            const themeToggleButton = document.getElementById('theme-toggle-btn');
-            const sunIcon = document.getElementById('sun-icon');
-            const moonIcon = document.getElementById('moon-icon');
+  </header>
 
-            function toggleTheme() {
-                document.body.classList.toggle('dark-mode');
-                sunIcon.classList.toggle('hidden');
-                moonIcon.classList.toggle('hidden');
-                localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-            }
-            
-            function applyInitialTheme() {
-                if (localStorage.getItem('theme') === 'dark') {
-                    document.body.classList.add('dark-mode');
-                    sunIcon.classList.add('hidden');
-                    moonIcon.classList.remove('hidden');
-                } else {
-                    document.body.classList.remove('dark-mode');
-                    sunIcon.classList.remove('hidden');
-                    moonIcon.classList.add('hidden');
-                }
-            }
-            
-            applyInitialTheme();
-            themeToggleButton.addEventListener('click', toggleTheme);
+  <main id="main">
+    <section class="wrap hero" id="top" aria-labelledby="hero-title">
+      <div>
+        <span class="eyebrow">Educational Designer · Applied Linguist</span>
+        <h1 id="hero-title">Academic quality, curriculum and AI-enabled education.</h1>
+        <p class="hero-lead">
+          Dr Stafford Lumsden is an award-winning educational designer and applied linguist specialising in
+          legal and professional education, curriculum and assessment reform, academic quality assurance,
+          digital learning and responsible generative AI integration.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="#experience">View experience</a>
+          <a class="button ghost" href="#publications">Read scholarship</a>
+          <button class="button ghost" type="button" onclick="window.print()">Print / save PDF</button>
+        </div>
+        <p class="hero-note">Sydney, Australia · University of Sydney Law School · PhD, Applied Linguistics · Senior Fellow, Advance HE</p>
+      </div>
 
-            // --- Accordion/Toggle Logic ---
-            const toggleButtons = document.querySelectorAll('.toggle-trigger');
+      <aside class="hero-card" aria-label="Professional snapshot">
+        <div class="profile-photo-wrap"><img class="profile-photo" src="https://impossible-trawler-a48.notion.site/image/attachment%3A66fe1b6e-a512-4bfb-906c-f60aa3ff140b%3AProfile_Pic_2-modified.png?table=block&amp;id=307fd303-c2d1-80ff-b44a-d2aae282e424&amp;spaceId=0e1920e8-43ea-4589-a1fd-25c69fd7cf72&amp;width=180&amp;userId=&amp;cache=v2&amp;imgBuildSrc=requestProxiedImageUrl" alt="Portrait of Dr Stafford Lumsden" width="180" height="180" loading="eager" decoding="async"></div>
+        <dl>
+          <div>
+            <dt>Current role</dt>
+            <dd>Educational Designer, University of Sydney Law School</dd>
+          </div>
+          <div>
+            <dt>Core focus</dt>
+            <dd>Curriculum governance, assessment, legal education, professional learning and responsible AI</dd>
+          </div>
+          <div>
+            <dt>Selected project</dt>
+            <dd>ODPP Role-Mapped Training Program Review · 2025</dd>
+          </div>
+        </dl>
+      </aside>
+    </section>
 
-            toggleButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const targetId = button.getAttribute('data-toggle-target');
-                    const targetContent = document.querySelector(targetId);
-                    const chevron = button.querySelector('.chevron-icon');
+    <section class="trusted" aria-labelledby="trusted-title">
+      <div class="wrap trusted-inner">
+        <h2 class="trusted-title" id="trusted-title">Trusted by</h2>
+        <div class="trusted-logos" aria-label="Selected organisations">
+          <div class="trusted-logo"><img src="https://impossible-trawler-a48.notion.site/image/attachment%3Aca37cb99-c7e6-4280-96f7-0cb088e2a0b9%3Aimage.png?table=block&amp;id=307fd303-c2d1-8094-94a8-d6be80f64cc9&amp;spaceId=0e1920e8-43ea-4589-a1fd-25c69fd7cf72&amp;width=180&amp;userId=&amp;cache=v2&amp;imgBuildSrc=requestProxiedImageUrl" alt="Organisation logo" loading="lazy" decoding="async"></div>
+          <div class="trusted-logo"><img src="https://impossible-trawler-a48.notion.site/image/attachment%3Ae78081ff-550d-4b54-b027-3755cf53f8eb%3Aimage2.png?table=block&amp;id=307fd303-c2d1-8014-ab52-f9076706d10c&amp;spaceId=0e1920e8-43ea-4589-a1fd-25c69fd7cf72&amp;width=180&amp;userId=&amp;cache=v2&amp;imgBuildSrc=requestProxiedImageUrl" alt="Organisation logo" loading="lazy" decoding="async"></div>
+          <div class="trusted-logo"><img src="https://impossible-trawler-a48.notion.site/image/attachment%3Ae15f31fc-9fb7-4c36-a77a-c737dd5f3d9b%3Aimage3.png?table=block&amp;id=307fd303-c2d1-803b-9779-c3207627f2f4&amp;spaceId=0e1920e8-43ea-4589-a1fd-25c69fd7cf72&amp;width=180&amp;userId=&amp;cache=v2&amp;imgBuildSrc=requestProxiedImageUrl" alt="Organisation logo" loading="lazy" decoding="async"></div>
+          <div class="trusted-logo"><img src="https://impossible-trawler-a48.notion.site/image/attachment%3Ac3038acc-07c9-4880-a642-3086b45a1f13%3Aimage5.png?table=block&amp;id=307fd303-c2d1-808b-9842-cffc993ef8f2&amp;spaceId=0e1920e8-43ea-4589-a1fd-25c69fd7cf72&amp;width=180&amp;userId=&amp;cache=v2&amp;imgBuildSrc=requestProxiedImageUrl" alt="Organisation logo" loading="lazy" decoding="async"></div>
+          <div class="trusted-logo"><img src="https://impossible-trawler-a48.notion.site/image/attachment%3A40917930-a908-4f44-b5a5-d97bf3fcbd44%3Aimage4.png?table=block&amp;id=307fd303-c2d1-8094-b393-ded0634a44ad&amp;spaceId=0e1920e8-43ea-4589-a1fd-25c69fd7cf72&amp;width=180&amp;userId=&amp;cache=v2&amp;imgBuildSrc=requestProxiedImageUrl" alt="Organisation logo" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </section>
 
-                    if (targetContent) {
-                        targetContent.classList.toggle('hidden');
-                    }
-                    if (chevron) {
-                        chevron.classList.toggle('rotate-180');
-                    }
-                });
-            });
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="section-kicker">About</span>
+          <div>
+            <h2>Evidence-led design for complex educational systems.</h2>
+            <p class="section-intro">
+              Stafford works at the intersection of pedagogy, curriculum governance, legal education,
+              applied linguistics, digital learning and organisational capability.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <div class="prose">
+            <p>
+              As the in-house Educational Designer at the University of Sydney Law School, Stafford supports
+              and leads work across <strong>curriculum design, assessment reform, academic quality assurance,
+              policy implementation, educator capability and responsible AI integration</strong> in LLB, JD,
+              postgraduate and professional law contexts.
+            </p>
+            <p>
+              His specialist practice includes <strong>role and capability mapping, learning-outcome architecture,
+              constructive alignment, adult learning, authentic assessment, program evaluation and evidence-based
+              review</strong>. His work translates educational research, policy and regulatory requirements into
+              approaches that are academically defensible and operationally workable.
+            </p>
+            <p>
+              Stafford holds a PhD in Applied Linguistics and researches multimodal social semiotics, online
+              learning environments, educator professional development, legal education and human–AI interaction.
+              His career spans Australia, New Zealand and South Korea.
+            </p>
+          </div>
+
+          <div class="stats" aria-label="Career highlights">
+            <article class="stat">
+              <span class="meta-label">Experience</span>
+              <span class="value">15+ yrs</span>
+              <span class="label">Higher education, teacher development and professional learning</span>
+            </article>
+            <article class="stat">
+              <span class="meta-label">Current sector</span>
+              <span class="value">Law</span>
+              <span class="label">LLB, JD, postgraduate, professional and continuing legal education</span>
+            </article>
+            <article class="stat">
+              <span class="meta-label">Research</span>
+              <span class="value">4</span>
+              <span class="label">Current 2026 research streams across AI, curriculum and engagement</span>
+            </article>
+            <article class="stat">
+              <span class="meta-label">Scholarship</span>
+              <span class="value">2011–26</span>
+              <span class="label">Published and presented across digital learning, AI, TESOL and legal education</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="expertise">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="section-kicker">Expertise</span>
+          <div>
+            <h2>From role expectations to demonstrable learning.</h2>
+            <p class="section-intro">
+              A quality-assurance lens that examines coherence, alignment, progression, validity, feasibility and evaluability.
+            </p>
+          </div>
+        </div>
+
+        <div class="capability-grid">
+          <article class="capability-card">
+            <span class="num">01</span>
+            <h3>Academic quality assurance</h3>
+            <p>Program, module and unit architecture; learning-outcome quality; scaffolding; coherence; duplication and gap analysis.</p>
+          </article>
+          <article class="capability-card">
+            <span class="num">02</span>
+            <h3>Capability mapping</h3>
+            <p>Translating role responsibilities, knowledge and skills into sequenced learning pathways and evidence of performance.</p>
+          </article>
+          <article class="capability-card">
+            <span class="num">03</span>
+            <h3>Assessment & evaluation</h3>
+            <p>Validity, rubrics, authentic performance, feedback, pilot evaluation and evidence for continuous improvement.</p>
+          </article>
+          <article class="capability-card">
+            <span class="num">04</span>
+            <h3>Legal education</h3>
+            <p>Curriculum, assessment, professional skills, accreditation, policy implementation and educator development in law.</p>
+          </article>
+          <article class="capability-card">
+            <span class="num">05</span>
+            <h3>Professional learning</h3>
+            <p>Adult learning, scenarios, modelling, coaching, guided debrief, blended delivery and practice-centred development.</p>
+          </article>
+          <article class="capability-card">
+            <span class="num">06</span>
+            <h3>Responsible AI</h3>
+            <p>Governance, curriculum integration, assessment reform, educator capability and practical adoption of generative AI.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="section-kicker">Experience</span>
+          <div>
+            <h2>Educational design across law, higher education and professional learning.</h2>
+          </div>
+        </div>
+
+        <article class="feature">
+          <div>
+            <span class="section-kicker">Selected project · 2025</span>
+            <h2>ODPP Role-Mapped Training Program Review</h2>
+            <p>
+              Named project team member with Professor Rita Shackel for the review of the ODPP
+              Role-Mapped Training Program.
+            </p>
+            <p>
+              Brought the educational-design and academic-quality lens required to examine the coherence,
+              alignment, progression, assessment and evaluability of role-specific professional learning
+              modules and pathways.
+            </p>
+          </div>
+          <div class="feature-meta">
+            <div>
+              <span class="meta-label">Role</span>
+              <p>Project team member</p>
+            </div>
+            <div>
+              <span class="meta-label">Organisation</span>
+              <p>NSW Office of the Director of Public Prosecutions</p>
+            </div>
+            <div>
+              <span class="meta-label">Location</span>
+              <p>Sydney</p>
+            </div>
+          </div>
+        </article>
+
+        <div class="timeline">
+          <details class="role" open>
+            <summary>
+              <div>
+                <div class="role-title">Educational Designer</div>
+                <div class="role-org">University of Sydney Law School · Sydney</div>
+              </div>
+              <div class="role-date">Feb 2023–Present</div>
+              <span class="toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="role-body">
+              <ul>
+                <li>Provides in-house educational-design leadership and specialist advice across LLB, JD, postgraduate coursework, professional law and HDR environments.</li>
+                <li>Reviews and redesigns curriculum, learning outcomes, assessment, rubrics and learning activities to strengthen alignment, academic standards and feasibility.</li>
+                <li>Supports School-level curriculum governance, policy implementation, quality assurance, assessment reform and course/unit approval processes.</li>
+                <li>Designs and facilitates professional learning for legal educators and professional staff, including assessment, feedback, inclusive teaching, digital pedagogy and responsible AI.</li>
+                <li>Develops practical frameworks and digital resources that translate institutional, accreditation and regulatory requirements into implementable practice.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="role">
+            <summary>
+              <div>
+                <div class="role-title">Independent Educational Design Consultant</div>
+                <div class="role-org">Higher education & professional education · Sydney</div>
+              </div>
+              <div class="role-date">Jun 2023–Present</div>
+              <span class="toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="role-body">
+              <ul>
+                <li>Designed accredited and bespoke legal/professional learning for organisations including the Legal Profession Admission Board and NSW ODPP.</li>
+                <li>Developed learning-design blueprints for SAP SuccessFactors Learning.</li>
+                <li>Advised on responsible generative-AI policy, governance and implementation for professional and higher-education programs.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="role">
+            <summary>
+              <div>
+                <div class="role-title">Educational Designer</div>
+                <div class="role-org">University of Wollongong · Wollongong</div>
+              </div>
+              <div class="role-date">Jul 2018–Jan 2023</div>
+              <span class="toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="role-body">
+              <ul>
+                <li>Partnered with subject coordinators, program directors and faculty leaders to design and review subjects and courses, including AQF Level 8 and 9 programs.</li>
+                <li>Undertook curriculum mapping, learning-outcome and assessment alignment, digital uplift and online/blended quality review.</li>
+                <li>Designed professional development, mentoring and resources for academics and contributed to institution-wide capability uplift.</li>
+                <li>Contributed to learning-and-teaching policy, governance, curriculum review and evidence-based improvement.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="role">
+            <summary>
+              <div>
+                <div class="role-title">Sessional Academic — TESOL / Curriculum</div>
+                <div class="role-org">Macquarie University · Sydney</div>
+              </div>
+              <div class="role-date">Jul 2018–Jan 2023</div>
+              <span class="toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="role-body">
+              <ul>
+                <li>Assessed complex lesson and curriculum plans against NSW curriculum requirements and postgraduate standards.</li>
+                <li>Provided criterion-referenced feedback and academic-literacy support in teacher education.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="role">
+            <summary>
+              <div>
+                <div class="role-title">Program Coordinator — Online & Young Learner TESOL</div>
+                <div class="role-org">Sookmyung Women’s University · Seoul</div>
+              </div>
+              <div class="role-date">Aug 2013–Jul 2018</div>
+              <span class="toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="role-body">
+              <ul>
+                <li>Led online postgraduate teacher-development programs spanning curriculum management, academic quality, faculty development, learner support, data analysis and governance.</li>
+                <li>Designed and evaluated blended and online professional-learning interventions for adult educators.</li>
+                <li>Managed stakeholder relationships, faculty capability and continuous improvement across international program environments.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="role">
+            <summary>
+              <div>
+                <div class="role-title">Earlier teacher-development roles</div>
+                <div class="role-org">Gyeongin National University of Education · Seoul National University of Education · YBM Premier</div>
+              </div>
+              <div class="role-date">2011–2013</div>
+              <span class="toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="role-body">
+              <p>Lead Teacher Trainer, Teacher Trainer and Academic Supervisor roles involving program development, curriculum support, faculty supervision and professional development.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="qualifications">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="section-kicker">Qualifications</span>
+          <div>
+            <h2>Research depth with practical quality and technology credentials.</h2>
+          </div>
+        </div>
+
+        <div class="qualification-grid">
+          <article class="qualification">
+            <small>2025 · Professional recognition</small>
+            <h3>Senior Fellow, Advance HE (SFHEA)</h3>
+            <p>Recognition of sustained educational leadership and influence on teaching and learning practice.</p>
+          </article>
+          <article class="qualification">
+            <small>2022 · Macquarie University</small>
+            <h3>Doctor of Philosophy — Applied Linguistics</h3>
+            <p>Multimodality, social semiotics, online learning and teacher professional development.</p>
+          </article>
+          <article class="qualification">
+            <small>2018 · Macquarie University</small>
+            <h3>Master of Research — Applied Linguistics</h3>
+            <p>Educational research, research methods, online teacher education and applied linguistics.</p>
+          </article>
+          <article class="qualification">
+            <small>2011 · Victoria University of Wellington</small>
+            <h3>Master of Arts — TESOL</h3>
+            <p>Applied linguistics, curriculum, pedagogy and assessment.</p>
+          </article>
+          <article class="qualification">
+            <small>2003 · University of Auckland</small>
+            <h3>Bachelor of Arts</h3>
+            <p>Political Science and Egyptology.</p>
+          </article>
+          <article class="qualification">
+            <small>2024 · Selected credentials</small>
+            <h3>AI, quality & process improvement</h3>
+            <p>Lean Six Sigma; IBM Generative AI for Cybersecurity Professional; Google AI Essentials; Microsoft/LinkedIn Generative AI Productivity.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="scholarship">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="section-kicker">Scholarship</span>
+          <div>
+            <h2>Current research connects AI, legal education and multimodal meaning.</h2>
+            <p class="section-intro">
+              Stafford’s scholarship bridges educational design practice with applied linguistics, digital learning
+              and the emerging conditions of AI-enabled education.
+            </p>
+          </div>
+        </div>
+
+        <div class="research-grid" aria-label="Current research projects in 2026">
+          <article class="research-card">
+            <span class="research-num">01</span>
+            <h3>AI Feedback and Long-form Writing</h3>
+          </article>
+          <article class="research-card">
+            <span class="research-num">02</span>
+            <h3>Indigenising the Law Curriculum</h3>
+          </article>
+          <article class="research-card">
+            <span class="research-num">03</span>
+            <h3>Inclusive Engagement in Law School Classrooms</h3>
+          </article>
+          <article class="research-card">
+            <span class="research-num">04</span>
+            <h3>Social Semiotic Analysis of Human–AI Chat</h3>
+          </article>
+        </div>
+
+        <div class="about-grid">
+          <article class="capability-card">
+            <span class="meta-label">Research contribution</span>
+            <h3>Multimodal Community of Inquiry</h3>
+            <p>
+              A mixed-method framework bringing the Community of Inquiry framework together with multimodal social
+              semiotics to examine how learning-management systems and non-linguistic resources shape online learning.
+            </p>
+          </article>
+          <article class="capability-card">
+            <span class="meta-label">Research contribution</span>
+            <h3>Educator professional development</h3>
+            <p>
+              Research-informed approaches to designing professional development for online educators, including
+              the use of multimodal social semiotic analysis to connect learning design with teaching practice.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="publications">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="section-kicker">Publications</span>
+          <div>
+            <h2>Selected and complete bibliography.</h2>
+            <p class="section-intro">Filter by area, or follow the source links to the published work.</p>
+          </div>
+        </div>
+
+        <div class="filters" role="group" aria-label="Filter publications">
+          <button class="filter active" type="button" data-filter="all">All</button>
+          <button class="filter" type="button" data-filter="multimodality">Multimodality</button>
+          <button class="filter" type="button" data-filter="ai">AI</button>
+          <button class="filter" type="button" data-filter="digital">Digital learning</button>
+          <button class="filter" type="button" data-filter="tesol">TESOL</button>
+        </div>
+
+        <div class="pub-list" id="publication-list">
+          <article class="pub" data-tags="multimodality tesol">
+            <div class="pub-year">2025</div>
+            <div>
+              <div class="pub-title">Making Sense of Multimodality and Social Semiotics in TESOL</div>
+              <div class="pub-citation">Lumsden, S. · <em>The English Connection</em>, 29(2), 6–8.</div>
+            </div>
+            <a class="pub-link" href="https://www.koreatesol.org/content/tec-summer-2025-issue-now-online" target="_blank" rel="noopener">View issue ↗</a>
+          </article>
+
+          <article class="pub" data-tags="multimodality digital tesol">
+            <div class="pub-year">2025</div>
+            <div>
+              <div class="pub-title">A multimodal social semiotic approach to TESOL educator professional development</div>
+              <div class="pub-citation">Lumsden, S. · In A. Alm, C. Lai & Q. Ma (Eds.), <em>Transitions in CALL</em>. Castledown.</div>
+            </div>
+            <a class="pub-link" href="https://doi.org/10.29140/9781914291272" target="_blank" rel="noopener">DOI ↗</a>
+          </article>
+
+          <article class="pub" data-tags="multimodality digital tesol">
+            <div class="pub-year">2024</div>
+            <div>
+              <div class="pub-title">A multimodal social semiotic approach to TESOL educator professional development</div>
+              <div class="pub-citation">Lumsden, S. · <em>Proceedings of the International CALL Research Conference</em>, 2024, 163–168.</div>
+            </div>
+            <a class="pub-link" href="https://doi.org/10.29140/9780648184485-25" target="_blank" rel="noopener">DOI ↗</a>
+          </article>
+
+          <article class="pub" data-tags="multimodality digital">
+            <div class="pub-year">2024</div>
+            <div>
+              <div class="pub-title">The multimodal community of inquiry: A framework for evaluating online learning environments in higher education</div>
+              <div class="pub-citation">Lumsden, S., Djonov, E. & Slatyer, H. · In F. V. Lim & M. Querol-Julián (Eds.), <em>Designing Learning with Digital Technologies</em>. Routledge.</div>
+            </div>
+            <a class="pub-link" href="https://doi.org/10.4324/9781003359272-5" target="_blank" rel="noopener">DOI ↗</a>
+          </article>
+
+          <article class="pub" data-tags="ai digital tesol">
+            <div class="pub-year">2023</div>
+            <div>
+              <div class="pub-title">Student Writing Support with Generative Artificial Intelligence</div>
+              <div class="pub-citation">Lumsden, S. · <em>The English Connection</em>, 27(3), 7–12.</div>
+            </div>
+            <a class="pub-link" href="https://www.koreatesol.org/sites/default/files/pdf_publications/TECv27-3Autumn2023.pdf" target="_blank" rel="noopener">PDF ↗</a>
+          </article>
+
+          <article class="pub" data-tags="multimodality digital">
+            <div class="pub-year">2022</div>
+            <div>
+              <div class="pub-title">A Multimodal Social Semiotic Approach to the Community of Inquiry Framework</div>
+              <div class="pub-citation">Lumsden, S. · Doctoral thesis, Macquarie University.</div>
+            </div>
+            <a class="pub-link" href="https://doi.org/10.13140/RG.2.2.20212.83846" target="_blank" rel="noopener">DOI ↗</a>
+          </article>
+
+          <article class="pub" data-tags="digital tesol">
+            <div class="pub-year">2018</div>
+            <div>
+              <div class="pub-title">The Relationship Between Teaching Presence and Online Instructor Satisfaction in an Online Teacher Training Program</div>
+              <div class="pub-citation">Lumsden, S. · Master’s thesis, Macquarie University.</div>
+            </div>
+            <a class="pub-link" href="https://dx.doi.org/10.13140/RG.2.2.18535.11688" target="_blank" rel="noopener">DOI ↗</a>
+          </article>
+
+          <article class="pub" data-tags="digital tesol">
+            <div class="pub-year">2011</div>
+            <div>
+              <div class="pub-title">Evaluating CALL Materials: How About an iPhone?</div>
+              <div class="pub-citation">Lumsden, S. · <em>Proceedings of PAC 2010 / 18th Annual KOTESOL International Conference</em>, 147–159.</div>
+            </div>
+            <a class="pub-link" href="https://koreatesol.org/sites/default/files/pdf_publications/KOTESOL-Proceeds2010web.pdf" target="_blank" rel="noopener">Proceedings ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="recognition">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="section-kicker">Recognition & service</span>
+          <div>
+            <h2>External engagement, awards and scholarly service.</h2>
+          </div>
+        </div>
+
+        <div class="recognition-grid">
+          <article class="recognition">
+            <span class="year">2025</span>
+            <h3>Governance Institute of Australia</h3>
+            <p>Contributor to an AI Deployment and Governance case study and GovBuzz podcast on responsible AI adoption at the University of Sydney.</p>
+          </article>
+          <article class="recognition">
+            <span class="year">2026</span>
+            <h3>University of Kent</h3>
+            <p>Invited presenter, <em>AI Agents and Workflows: Opportunities and Challenges for Education</em>.</p>
+          </article>
+          <article class="recognition">
+            <span class="year">2024</span>
+            <h3>University of New England</h3>
+            <p>Presenter at Common Law Week on AI-enabled feedback and assessment workflows for legal educators.</p>
+          </article>
+          <article class="recognition">
+            <span class="year">2020</span>
+            <h3>Australian Financial Review Higher Education Award</h3>
+            <p>Learning Experience category — member of the winning University of Wollongong team.</p>
+          </article>
+          <article class="recognition">
+            <span class="year">2020–2021</span>
+            <h3>University of Wollongong recognition</h3>
+            <p>Vice-Chancellor’s Award for Outstanding Service for Professional Services Staff; Deputy Vice-Chancellor (Education) Recognition of Learning and Teaching.</p>
+          </article>
+          <article class="recognition">
+            <span class="year">2023–Present</span>
+            <h3>Scholarly service</h3>
+            <p>Korea TESOL Service Award; former National Research Committee Chair; Peer Reviewer, <em>Linguistics and Education</em>; Board of Editors, <em>Korea TESOL Journal</em>.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="methods">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="section-kicker">Methods & systems</span>
+          <div>
+            <h2>Research, design and delivery tools.</h2>
+          </div>
+        </div>
+
+        <div class="tools">
+          <article class="tool-group">
+            <h3>Learning design</h3>
+            <p>Constructive alignment, backward design, curriculum and capability mapping, adult learning, experiential and scenario-based learning, assessment and rubrics.</p>
+          </article>
+          <article class="tool-group">
+            <h3>Digital learning</h3>
+            <p>SAP SuccessFactors Learning, Canvas, Moodle, Blackboard, Articulate 360, H5P, Microsoft 365, SharePoint and Teams.</p>
+          </article>
+          <article class="tool-group">
+            <h3>Research & analytics</h3>
+            <p>NVivo, SPSS, Power BI, surveys, interviews, qualitative coding, mixed-methods analysis and evidence synthesis.</p>
+          </article>
+          <article class="tool-group">
+            <h3>AI & governance</h3>
+            <p>Responsible generative-AI integration, policy and governance, educator capability, Microsoft Copilot and legal-sector generative-AI platforms.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="wrap contact">
+        <div>
+          <span class="section-kicker">Contact</span>
+          <h2>Academic quality and educational design for complex professional contexts.</h2>
+          <p>
+            Based in Sydney and working across legal education, professional learning, curriculum governance,
+            assessment reform and responsible AI-enabled education.
+          </p>
+        </div>
+        <div class="contact-links">
+          <a class="button" href="mailto:stafford@laweddesign.com">stafford@laweddesign.com</a>
+          <a class="button ghost" href="https://www.linkedin.com/in/stafford-lumsden" target="_blank" rel="noopener">LinkedIn profile</a>
+          <a class="button ghost" href="tel:+61459716964">+61 459 716 964</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© 2026 Stafford Lumsden</span>
+      <span>Educational Designer · Applied Linguist · Sydney, Australia</span>
+    </div>
+  </footer>
+
+  <script>
+    const filterButtons = document.querySelectorAll('.filter');
+    const publications = document.querySelectorAll('.pub');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const selected = button.dataset.filter;
+
+        filterButtons.forEach(item => item.classList.remove('active'));
+        button.classList.add('active');
+
+        publications.forEach(pub => {
+          const tags = (pub.dataset.tags || '').split(' ');
+          pub.hidden = selected !== 'all' && !tags.includes(selected);
         });
-    </script>
+      });
+    });
+
+    const sections = [...document.querySelectorAll('main section[id]')];
+    const navLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(link => link.removeAttribute('aria-current'));
+        const current = navLinks.find(link => link.getAttribute('href') === '#' + entry.target.id);
+        if (current) current.setAttribute('aria-current', 'true');
+      });
+    }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
 </body>
 </html>
-
-
